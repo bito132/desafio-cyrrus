@@ -1,59 +1,32 @@
-# TesteCyrrus
+<h3> Meu processo para rodar o projeto </h3>
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.9.
+A tecnologia utilizada foi o Angular, por conta disso é preciso rodar as seguintes linhas de comando no terminal para rodar o projeto:
+- npm install
+- ng serve
 
-## Development server
+<h3> 1. Qual foi sua lógica para estruturar o projeto? </h3>
 
-To start a local development server, run:
 
-```bash
-ng serve
-```
+Eu não sabia o que era um quadro de Kanban, após pesquisar eu achei que seria razoável fazer 4 colunas próximas ou em seguida uma da outra. Após ter o espaço principal do desafio, eu me guiei com base em funcionalidades principais, criar as tarefas, a mecânica de drag and drop, o filtro e as ordenações.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Com base na necessidade de cada funcionalidade, o próprio projeto foi se expandindo sem eu precisar ativamente pensar em como organizar ele, felizmente a estrutura padrão do Angular já influência o projeto a ter uma boa organização, mas eu acabei não gerenciando muito bem essa organização.
 
-## Code scaffolding
+<h3> 2. Que parte você achou mais difícil ou travou? </h3>
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Foi minha primeira vez usando o Angular, eu primeiro vi alguns tutoriais e depois fui fazer o projeto em si, mas eu fiquei muito perdido por que só na hora da prática que eu descobri que os tutoriais de 3 anos atrás que eu vi eram sobre uma versão do Angular antes dele se tornar standalone, o que me travou muito, depois eu fui vendo e aprendendo como funcionava cada coisa, felizmente não havia muitas diferenças sobre como se utilizava o Angular, mas ainda assim, eu posso dizer que o começo foi a parte mais díficil.
 
-```bash
-ng generate component component-name
-```
+<h3> 3. O que faria diferente se tivesse mais tempo? </h3>
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Eu faria a funcionalidade de criar uma sub-tarefas dentro da área de criação de tarefas, o que era a coisa que eu menos tinha ideia de como fazer de todas as funcionalidades, eu deixei ela para o final e acabei ficando sem tempo para fazer ela.
 
-```bash
-ng generate --help
-```
+Eu não fiz a funcionalidade de filtrar por status de tarefa pois eu não achei que fazia muito sentido, já que as tarefas por si só já estavam separadas por coluna, então eu pensei em deixar ela para ser a última funcionalidade a implementar, eu implementaria ela escolhendo algum status e fazendo um pop up com uma grande visualização de cada tarefa com aquele status.
 
-## Building
+Por fim, o que eu faria seria fazer um bom design, eu realmente pensei no começo que eu tinha feito boas escolhas de cores, mas depois, a medida que o projeto progredia e eu não estilizava os elementos que eu colocava, eu notei o quão horrível ficou, mas como eu tava ficando sem tempo, resolvi priorizar terminar as funcionalidades que eu conseguisse.
 
-To build the project run:
+<h3> 4. O que faria diferente se fosse para um cliente real? </h3>
 
-```bash
-ng build
-```
+Eu questionaria o que ele gostaria que acontecesse exatamente com cada coisa, pois ele poderia ter uma visão diferente da minha, e certamente eu deixaria a interface mais amigável do que como ficou o resultado final.
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+<h3> 5. Você usou alguma ferramenta ou inteligência artificial para ajudar? Como? </h3>
 
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Sim, eu nunca utilizei tanto o chat-gpt quanto eu utilizei no dia 28/04/2025 e um pouco do dia 27, os dias que eu tinha disponivel para fazer o projeto, como eu fui surpreendido com o fato de eu ter visto vídeos aulas de uma versão que já não é recomendada usar do Angular, eu usei muito a inteligência artificial para que eu conseguisse me guiar no começo. Fora isso o outro grande uso que tive com ela foi para lembrar de atributos de elementos HTML, atributos CSS e algumas funções de javascript, isso devido a minha pouca experiência fazendo atividades voltadas a web, o que me fez esquecer de muitos detalhes comuns a essa atividade.
