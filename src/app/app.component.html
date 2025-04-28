@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quadro Kanban</title>
+</head>
+<body>
+
+  <ul class="menu-funconalidades">
+
+    <li class="caixa-pesquisa-por-titulo">
+      <input type="text" id="pesquisa-titulo" class="pesquisa-por-titulo" [(ngModel)] = "pesquisa_titulo" name="pesquisa_titulo" placeholder="buscar por título">
+    </li>
+    <li>
+      <select [(ngModel)] = "ordenacao_tarefas" class="selecionar-ordenacao" name="ordenacao_tarefas">
+        <option value="criacao">Data de criação</option>
+        <option value="nomes">Título</option>
+        <option value="prazos">Prazos</option>
+      </select>
+    </li>
+    <li>
+      <button (click)="toggle_formulario()" class="botao-adicionar-tarefa">
+        Adicionar tarefa
+      </button>
+    </li>
+  </ul>
+
+  <div *ngIf="formulario_visivel" class="escurecer-fundo"></div>
+
+  <div *ngIf="formulario_visivel" class="criacao-tarefa">
+
+    <form action="">
+
+        <div class="areas-de-input">
+          Nome da tarefa
+          <br>
+          <input type="text" id="nome-tarefa" class="inputs-formulario" [(ngModel)] = "nome_tarefa" name="nome_tarefa">
+        </div>
+    
+        <div class="areas-de-input">
+          descrição
+          <br>
+          <textarea [(ngModel)] = "descricao_tarefa" name="descricao_tarefa" id="descricao-tarefa" class="inputs-formulario"></textarea>
+        </div>
+
+        <div class="areas-de-input">
+          Nível de conclusão da tarefa
+          <br>
+          <select [(ngModel)] = "estado_tarefa" id="estados-das-tarefas" name="estado_tarefa">
+            <option value="aberto">Aberto</option>
+            <option value="em andamento">Em andamento</option>
+            <option value="concluido">Concluído</option>
+            <option value="done done">Done Done</option>
+          </select>
+        </div>
+    
+        <div class="areas-de-input">
+          Prazo para conclusão(opcional)
+          <br>
+          <input type="date" id="input-prazo" [(ngModel)] = "prazo_tarefa" name = "prazo_tarefa">
+        </div>
+    
+        <div class="area-botoes-formulario">
+          <button (click)="toggle_formulario()" class="botoes-formulario">
+            Cancelar
+          </button>
+          <input (click)="fazer_tarefa()" type="submit" value="Confirmar" class="botoes-formulario">
+        </div>
+
+    </form>
+  </div>
+
+  <app-coluna-kanban [lista_terefas] = "lista_terefas" [ordenacao_tarefas] = "ordenacao_tarefas" [pesquisa_titulo] = "pesquisa_titulo" (elemento_visualizado) = "editar_elemento($event)"></app-coluna-kanban>
+
+    <ul class="caixas-quantidade-por-coluna">
+      <li class="caixa-quantidade-por-coluna" id="caixa-quantidade-por-coluna-1">
+        <p class="texto-quantidade-por-coluna">{{tamanho_de_colunas('aberto')}}</p>
+      </li>
+      <li class="caixa-quantidade-por-coluna" id="caixa-quantidade-por-coluna-2">
+        <p class="texto-quantidade-por-coluna">{{tamanho_de_colunas('em andamento')}}</p>
+      </li>
+      <li class="caixa-quantidade-por-coluna" id="caixa-quantidade-por-coluna-3">
+        <p class="texto-quantidade-por-coluna">{{tamanho_de_colunas('concluido')}}</p>
+      </li>
+      <li class="caixa-quantidade-por-coluna" id="caixa-quantidade-por-coluna-4">
+        <p class="texto-quantidade-por-coluna">{{tamanho_de_colunas('done done')}}</p>
+      </li>
+    </ul>
+
+</body>
+</html>

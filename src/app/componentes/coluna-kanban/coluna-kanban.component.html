@@ -1,0 +1,107 @@
+<ul class="lista-colunas">
+
+    <li class="item-lista">
+        <div class="titulo-coluna">
+            <ul class="elementos-titulo-coluna">
+                <li><p class="texto-titulo-coluna">Aberto</p></li>
+                <li>
+                    <button class="botao-detalhes">
+                        detalhes
+                    </button>
+                </li>
+            </ul>
+            
+        </div>
+        <div class="coluna" id="coluna-1" (dragover) = "arrastando($event)" (drop) = "largar($event, 'aberto')">
+
+            <div draggable="true" *ngFor="let item of filtro_de_tarefas('aberto')" class="item-tarefa" (dragstart) = "inicio_do_arrasto(item)">
+                <p class="texto-item-tarefa">{{item.nome}}</p>
+                <button class="botao-item-tarefa" (click)="toggle_formulario(item)">
+                    detalhes
+                </button>
+                <p class="texto-item-tarefa" id="item-prazo"  *ngIf="item.prazo">{{item.prazo}}</p>
+                <p class="texto-item-tarefa" id="item-prazo"  *ngIf="!item.prazo">sem prazo estipulado</p>
+
+            </div>
+
+        </div>
+    </li>
+
+    <li class="item-lista">
+        <div class="titulo-coluna">
+            <ul class="elementos-titulo-coluna">
+                <li><p class="texto-titulo-coluna">Em andamento</p></li>
+                <li>
+                    <button class="botao-detalhes">
+                        detalhes
+                    </button>
+                </li>
+            </ul>
+        </div>
+        <div class="coluna" id="coluna-2" (dragover) = "arrastando($event)" (drop) = "largar($event, 'em andamento')">
+
+            <div draggable="true" *ngFor="let item of filtro_de_tarefas('em andamento')" class="item-tarefa" (dragstart) = "inicio_do_arrasto(item)">
+                <p class="texto-item-tarefa">{{item.nome}}</p>
+                <button class="botao-item-tarefa" (click)="toggle_formulario(item)">
+                    detalhes
+                </button>
+                <p class="texto-item-tarefa" id="item-prazo"  *ngIf="item.prazo">{{item.prazo}}</p>
+                <p class="texto-item-tarefa" id="item-prazo"  *ngIf="!item.prazo">sem prazo estipulado</p>
+
+            </div>
+
+        </div>
+    </li>
+
+    <li class="item-lista">
+        <div class="titulo-coluna">
+            <ul class="elementos-titulo-coluna">
+                <li><p class="texto-titulo-coluna">Concluído</p></li>
+                <li>
+                    <button class="botao-detalhes">
+                        detalhes
+                    </button>
+                </li>
+            </ul>
+        </div>
+        <div class="coluna" id="coluna-3" (dragover) = "arrastando($event)" (drop) = "largar($event, 'concluido')">
+
+            <div draggable="true" *ngFor="let item of filtro_de_tarefas('concluido')" class="item-tarefa" (dragstart) = "inicio_do_arrasto(item)">
+                <p class="texto-item-tarefa">{{item.nome}}</p>
+                <button class="botao-item-tarefa" (click)="toggle_formulario(item)">
+                    detalhes
+                </button>
+                <p class="texto-item-tarefa" id="item-prazo"  *ngIf="item.prazo">{{item.prazo}}</p>
+                <p class="texto-item-tarefa" id="item-prazo"  *ngIf="!item.prazo">sem prazo estipulado</p>
+
+            </div>
+
+        </div>
+    </li>
+
+    <li class="item-lista">
+        <div class="titulo-coluna">
+            <ul class="elementos-titulo-coluna">
+                <li><p class="texto-titulo-coluna">Done done</p></li>
+                <li>
+                    <button class="botao-detalhes">
+                        detalhes
+                    </button>
+                </li>
+            </ul>
+        </div>
+        <div class="coluna" id="coluna-4" (dragover) = "arrastando($event)" (drop) = "largar($event, 'done done')">
+
+            <div draggable="true" *ngFor="let item of filtro_de_tarefas('done done')" class="item-tarefa" (dragstart) = "inicio_do_arrasto(item)">
+                <p class="texto-item-tarefa">{{item.nome}}</p>
+                <button class="botao-item-tarefa" (click)="toggle_formulario(item)">
+                    detalhes
+                </button>
+                <p class="texto-item-tarefa" id="item-prazo"  *ngIf="item.prazo">{{item.prazo}}</p>
+                <p class="texto-item-tarefa" id="item-prazo"  *ngIf="!item.prazo">sem prazo estipulado</p>
+
+            </div>
+
+        </div>
+    </li>
+</ul>
